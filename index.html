@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cajero Automatico</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1 id="tittle">Cajero Automático</h1>
+    <div class="container">
+        <img src="https://img.freepik.com/vector-premium/lindo-sonriente-feliz-cajero-automatico-dinero-ilustracion-personaje-dibujos-animados-plana-aislado-sobre-fondo-blanco-cajero-automatico-concepto-personaje-atm_92289-1445.jpg?w=2000"
+            alt="cajero">
+    </div>
+    <div class="inicio" id="login">
+        <h2 id="tittle">Selecciona una cuenta</h2>
+        <button onclick="seleccionarCuenta(0)">Persona 1</button>
+        <button onclick="seleccionarCuenta(1)">Persona 2</button>
+        <button onclick="seleccionarCuenta(2)">Persona 3</button>
+    </div>
+    <div class="container">
+        <div id="operaciones">
+            <h2>Ingresar password</h2>
+            <input type="password" id="passwordInput">
+            <button onclick="verificarPassword()">Ingresar</button>
+            <button onclick="mostrarLogin()">Volver</button>
+
+        </div>
+        <div>
+            <div>
+                <div id="saldo">
+                    <button onclick="mostrarSaldoModal()">Consultar Saldo</button>
+                    <button onclick="mostrarOpciones()">Volver</button>
+                </div>
+                <div id="saldoModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="cerrarSaldoModal()">&times;</span>
+                        <h2>Saldo actual</h2>
+                        <p id="saldoActualModal"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ingresarMonto">
+                <h2>Ingresar Monto</h2>
+                <input type="number" id="montoInputIngresar">
+                <button onclick="ingresarMonto()">Ingresar</button>
+
+            </div>
+
+            <div id="retirarMonto">
+                <h2>Retirar Monto</h2>
+                <input type="number" id="montoInputRetirar">
+                <button onclick="retirarMonto()">Retirar</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
